@@ -20,7 +20,6 @@ versions:
 
 You can create webhooks that subscribe to the events listed on this page. Each webhook event includes a description of the webhook properties and an example payload. For more information, see "[Creating webhooks](/webhooks/creating/)."
 
-
 ### Webhook payload object common properties
 
 Each webhook event payload also contains properties unique to the event. You can find the unique properties in the individual event type sections.
@@ -968,7 +967,7 @@ Deliveries for `review_requested` and `review_request_removed` events will have 
 
 Key | Type | Description
 ----|------|-------------
-`ref`|`string` | The full [`git ref`](/v3/git/refs/) that was pushed. Example: `refs/heads/master`.
+`ref`|`string` | The full [`git ref`](/v3/git/refs/) that was pushed. Example: `refs/heads/main`.
 `before`|`string` | The SHA of the most recent commit on `ref` before the push.
 `after`|`string` | The SHA of the most recent commit on `ref` after the push.
 `commits`|`array` | An array of commit objects describing the pushed commits. (The array includes a maximum of 20 commits. If necessary, you can use the [Commits API](/v3/repos/commits/) to fetch additional commits. This limit is applied to timeline events only and isn't applied to webhook deliveries.)
@@ -1294,7 +1293,6 @@ This event occurs when someone triggers a workflow run on GitHub or sends a `POS
 
 {{ webhookPayloadsForCurrentVersion.workflow_dispatch }}
 {% endif %}
-
 
 ### workflow_run
 

@@ -70,6 +70,7 @@ Organization members can have *owner*{% if currentVersion == "free-pro-team@late
 | Convert organization members to [outside collaborators](#outside-collaborators) | **X** | | |
 | [View people with access to an organization repository](/articles/viewing-people-with-access-to-your-repository) | **X** | | |
 | [Export a list of people with access to an organization repository](/articles/viewing-people-with-access-to-your-repository/#exporting-a-list-of-people-with-access-to-your-repository) | **X** | | |
+| Manage the default branch name (see "[Managing the default branch name for repositories in your organization](/github/setting-up-and-managing-organizations-and-teams/managing-the-default-branch-name-for-repositories-in-your-organization)") | **X** | | |
 | Manage default labels (see "[Managing default labels for repositories in your organization](/articles/managing-default-labels-for-repositories-in-your-organization)") | **X** | | |
 | Enable team synchronization (see "[Managing team synchronization for your organization](/github/setting-up-and-managing-organizations-and-teams/managing-team-synchronization-for-your-organization)" for details) | **X** |  | |
 
@@ -94,8 +95,8 @@ Organization members can have *owner*{% if currentVersion == "free-pro-team@late
 | See all organization members and teams | **X** | **X** |
 | @mention any visible team | **X** | **X** |
 | Can be made a *team maintainer* | **X** | **X** |
-| Transfer repositories | **X** | |{% if currentVersion ver_gt "enterprise-server@2.18" %}
-| Manage an organization's SSH certificate authorities (see "[Managing your organization's SSH certificate authorities](/articles/managing-your-organizations-ssh-certificate-authorities)" for details) | **X** |  |{% endif %}
+| Transfer repositories | **X** | |
+| Manage an organization's SSH certificate authorities (see "[Managing your organization's SSH certificate authorities](/articles/managing-your-organizations-ssh-certificate-authorities)" for details) | **X** |  |
 | Create project boards (see "[Project board permissions for an organization](/articles/project-board-permissions-for-an-organization)" for details) | **X** | **X** | |
 | View and post public team discussions to **all teams** (see "[About team discussions](/articles/about-team-discussions)" for details) | **X** | **X** |  |
 | View and post private team discussions to **all teams** (see "[About team discussions](/articles/about-team-discussions)" for details) | **X** |  |  |

@@ -30,7 +30,7 @@ steps:
       Last_Name: Octocat
 ```
 
-You can also use the `set-env` workflow command to set an environment variable that the following steps in a workflow can use. The `set-env` command can be used directly by an action or as a shell command in a workflow file using the `run` keyword. For more information, see "[Workflow commands for {% data variables.product.prodname_actions %}](/actions/reference/workflow-commands-for-github-actions/#setting-an-environment-variable)."
+You can also use the {% if currentVersion == "free-pro-team@latest" or currentVersion ver_gt "enterprise-server@2.22" %}`GITHUB_ENV` environment file{% else %} `set-env` workflow command{% endif %} to set an environment variable that the following steps in a workflow can use. The {% if currentVersion == "free-pro-team@latest" or currentVersion ver_gt "enterprise-server@2.22" %}environment file{% else %} `set-env` command{% endif %} can be used directly by an action or as a shell command in a workflow file using the `run` keyword. For more information, see "[Workflow commands for {% data variables.product.prodname_actions %}](/actions/reference/workflow-commands-for-github-actions/#setting-an-environment-variable)."
 
 ### Default environment variables
 
@@ -49,7 +49,7 @@ We strongly recommend that actions use environment variables to access the files
 | `GITHUB_REPOSITORY` | The owner and repository name. For example, `octocat/Hello-World`. |
 | `GITHUB_EVENT_NAME` | The name of the webhook event that triggered the workflow. |
 | `GITHUB_EVENT_PATH` | The path of the file with the complete webhook event payload. For example, `/github/workflow/event.json`. |
-| `GITHUB_WORKSPACE` | The {% data variables.product.prodname_dotcom %} workspace directory path. The workspace directory contains a subdirectory with a copy of your repository if your workflow uses the [actions/checkout](https://github.com/actions/checkout) action. If you don't use the `actions/checkout` action, the directory will be empty. For example, `/home/runner/work/my-repo-name/my-repo-name`. |
+| `GITHUB_WORKSPACE` | The {% data variables.product.prodname_dotcom %} workspace directory path. The workspace directory is a copy of your repository if your workflow uses the [actions/checkout](https://github.com/actions/checkout) action. If you don't use the `actions/checkout` action, the directory will be empty. For example, `/home/runner/work/my-repo-name/my-repo-name`. |
 | `GITHUB_SHA` | The commit SHA that triggered the workflow. For example, `ffac537e6cbbf934b08745a378932722df287a53`. |
 | `GITHUB_REF` | The branch or tag ref that triggered the workflow. For example, `refs/heads/feature-branch-1`. If neither a branch or tag is available for the event type, the variable will not exist. |
 | `GITHUB_HEAD_REF` | Only set for forked repositories. The branch of the head repository.
